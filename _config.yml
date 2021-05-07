@@ -1,1 +1,10 @@
 theme: jekyll-theme-minimal
+
+locale: "UTF-8"
+title: "AhHyeon's SPIELRAUM"
+title_separator: "-"
+subtitle: "개발을 일상처럼"
+name: "AhHyeon, Park"
+description: "Asset"
+url: "https://AH-techTree.github.io"
+repository: "AH-techTree/AH-techTree.github.io.git"
