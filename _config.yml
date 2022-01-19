@@ -1,10 +1,47 @@
-theme: jekyll-theme-minimal
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
+# Site Settings
 locale: "UTF-8"
-title: "AhHyeon's SPIELRAUM"
-title_separator: "-"
-subtitle: "개발을 일상처럼"
-name: "AhHyeon, Park"
-description: "안녕하세요"
-url: "https://AH-techTree.github.io"
-repository: "AH-techTree/AH-techTree.github.io.git"
+title: "AhHyeon's SPECTRUM" #site title. 사이트 masthead와  <title> 태그와 같은 위치에서 테마 전체에 사용됨.
+title_separator: "-"  # 타이틀 사이 구분자 <title>Welcome to Jekyll | Minimal Mistakes</title> 해당 형식으로 들어감.
+subtitle: "상상을 일상으로"  #사이트 masthead의 제목 아래에 표시되는 짧은 태그라인.
+name: "AhHyeon, Park"  #사이트 작성자 지정. 특정 게시물, 페이지, 컬렉션 문서에서 사이트 작성자를 다른 작성자로 재정의 가능.
+description: "기술의 스펙트럼을 넓히는 공간"  #사이트 설명. SEO 개선을 위한 메타 설명에서 주로 사용.
+url: "https://AH-techTree.github.io"  #사이트의 기본 호스트명과 프로토콜.
+repository: "AH-techTree/AH-techTree.github.io.git"  #조직이 포함된 저장소명을 사이트의 구성 파일인 _config.yml에 추가함. "username/repo-name"
+teaser: "/assets/images/500x300.png"  #site default teaser image. 
+                                    #"관련 게시물" 모듈에 사용된 대체 티저 이미지 할당하려면, /assets/images/ 디렉터리에 그래믹을 배치하고 파일명을  _config.yml에 추가
+logo: "/assets/images/88x88.png"   #site masthead logo. 사이트 제목 앞에 로고 삽입. /assets/images/에 그래픽 배치하고 파일명을 _config.yml에 추가.
+masthead_title: "기본을 기본으로 개발자" #기본적으로 masthead에 사용되는 사이트 제목 재정의.
+breadcrumbs: true  #disabled by default. 방문자가 딥 사이트를 더 잘 탐색할 수 있도록 탐색경로 링크 활성화.
+
+date_format: "%Y-%b-%d"  #default format : "%B %-d, %Y" 날짜 형식 설정.
+words_per_minute: 250  #기본 분당 단어 수 값. 페이지별로 조정 가능. 다국어 컨텐츠가 있는 사이트에 유용.
+
+#Site Autour
+author:
+  name : "박아현"
+  avatar: "assets/images/profile/poto.jpg"
+
+defaults:
+  # _posts (기본키를 사용하여 레이아웃 설정, 모든 게시물에 대한 작성자 프로필, 읽기 시간, 댓글, 소셜 공유 및 관련 게시물을 한 번에 활성화)
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      show_date: true  #게시 날짜 스니펫 활성화. 비활성화는 show_date: false로 변경.
+
+  # _pages
+    - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
